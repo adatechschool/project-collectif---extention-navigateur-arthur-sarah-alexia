@@ -1,0 +1,26 @@
+{
+    "manifest_version" : 2,
+    "name": "Sarah's GIF extension",
+    "description": "GIF extension test",
+    "version": "1.0",
+    "permissions": [
+        "http://*/*",
+        "https://*/*",
+        "notifications",
+        "storage"
+    ],
+    "browser_action": {
+        "default_icon": "img/pikachu-1.png",
+        "default_popup": "popup.html"
+    },
+    "action": {
+    "default_popup": "popup.html"
+    },
+    "icons": {
+        "128": "img/pokemon-pokeball-icon-1.png"
+    },
+    "background" : {
+        "scripts": ["js/app.js"]
+    }
+   
+}
