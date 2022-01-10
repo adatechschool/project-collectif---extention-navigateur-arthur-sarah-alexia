@@ -11,3 +11,11 @@ button.current {
   box-shadow: 0 0 0 2px white,
               0 0 0 4px black;
 }
+.pattern1 {
+  background-image: repeating-conic-gradient(
+    from 0deg,
+    #9c82ec 0deg 30deg,
+    #141238 30deg 60deg,
+    #5521f1 60deg 90deg
+  );
+}
