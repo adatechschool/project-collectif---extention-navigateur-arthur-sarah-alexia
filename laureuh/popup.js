@@ -96,6 +96,10 @@ changeFontSize.addEventListener("click", async () => {
       //   // current page
         function setChangeBorderColor() {
           chrome.storage.sync.get("borderColor", ({ borderColor }) => {
-            document.querySelector("img").style.borderColor = borderColor;
+            let allImages = document.querySelectorAll("img");
+            for (let img of allImages) {
+              img.style.border = borderColor;
+            }
           });
         }
+
