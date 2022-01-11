@@ -8,3 +8,12 @@ Pour ce premier jour nous avons :
 - Créer un Miro
 - En apprendre + sur les extensions 
 - Commencer à coder des extensions 
+
+11/01/2022
+
+Pour ce deuxième jour nous avons : 
+- Terminer tous les exercices de la partie je débute
+- Extension changement de couleur des bordures
+- Extension changement de taille de la police
+- Extension changement des couleurs des balises h1 / background
+- Extension changement des images par une autre  
