@@ -23,4 +23,10 @@ chrome.runtime.onInstalled.addListener(() => {
   console.log('Default font size set to 20px');
 });
 
-let sizeFont2 = [];
+let borderColor = "15px solid #f00020";
+
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.storage.sync.set({ borderColor });
+  console.log('Default color border set to RED');
+});
+
