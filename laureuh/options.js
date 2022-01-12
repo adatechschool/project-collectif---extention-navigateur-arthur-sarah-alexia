@@ -69,7 +69,7 @@ function handleButtonGifClick(event) {
   chrome.storage.sync.set({ pokemonGif });
 }
 
-
+//fonction qui va créer nos boutons pour choisir le GIF
 function constructGifOptions(buttonGifs) {
   chrome.storage.sync.get("pokemonGif", (data) => {
     let currentGif = data.color;
