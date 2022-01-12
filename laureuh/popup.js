@@ -96,28 +96,54 @@ function setChangeBorderColor() {
 };
 
 
-// replace images by another image
-let changeImage = document.getElementById("changeImage");
+// // replace images by another image
+// let changeImage = document.getElementById("changeImage");
 
-chrome.storage.sync.get("color", ({ color }) => {
-  changeImage.style.backgroundColor = "#FFC93C";
+// chrome.storage.sync.get("color", ({ color }) => {
+//   changeImage.style.backgroundColor = "#FFC93C";
+// });
+
+// changeImage.addEventListener("click", async () => {
+//   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  
+//   chrome.scripting.executeScript({
+//     target: { tabId: tab.id },
+//     function: setCatImage,
+//   });
+// });
+  
+// function setCatImage() {
+//   chrome.storage.sync.get("catPic", ({ catPic }) => {
+//     let allImages = document.querySelectorAll("img");
+//     //let newImage = document.getElementById("img").src = "images/catpic.png";
+//      for (let img of allImages) {
+//        img.src = catPic
+//      }
+//   });
+// };
+
+
+// GIF
+let changeGif = document.getElementById("changeGif");
+
+chrome.storage.sync.get("pokemonGif", ({ pokemonGif })=> {
+  changeGif.style.backgroundImage = pokemonGif;
 });
 
-changeImage.addEventListener("click", async () => {
+changeGif.addEventListener("click", async () => {
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
-    function: setCatImage,
+    function: setPokemonGif,
   });
 });
   
-function setCatImage() {
-  chrome.storage.sync.get("catPic", ({ catPic }) => {
+function setPokemonGif() {
+  chrome.storage.sync.get("pokemonGif", ({ pokemonGif }) => {
     let allImages = document.querySelectorAll("img");
-    //let newImage = document.getElementById("img").src = "images/catpic.png";
      for (let img of allImages) {
-       img.src = catPic
+       img.src = pokemonGif
      }
   });
 };
