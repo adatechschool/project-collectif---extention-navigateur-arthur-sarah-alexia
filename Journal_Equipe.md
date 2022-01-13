@@ -17,3 +17,7 @@ Pour ce deuxième jour nous avons :
 - Extension changement de taille de la police
 - Extension changement des couleurs des balises h1 / background
 - Extension changement des images par une autre 
+
+12/01/2022
+- Extension changement des images par un GIF sélectionner au préalable
+- Les boutons remplis par les GIF
