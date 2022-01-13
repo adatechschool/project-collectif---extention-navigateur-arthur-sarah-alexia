@@ -76,7 +76,7 @@ function constructGifOptions(buttonGifs) {
       // button.dataset.pokemonGif = buttonGif;
       console.log( "Coucou", button, );
       pokemonGif = presetButtonGifs[i];
-      let url = `background-image: url(${pokemonGif})`;
+      let url = `background-image: url(${pokemonGif}); background-size: 30px 30px`;
       button.style = url;
       console.log( "Uesh", button, );
 
