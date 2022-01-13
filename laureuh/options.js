@@ -71,11 +71,12 @@ function handleButtonGifClick(event) {
 function constructGifOptions(buttonGifs) {
   chrome.storage.sync.get("pokemonGif", (data) => {
     let currentGif = data.color
-    for (let buttonGif of buttonGifs) {
+    for (let [i, buttonGif] of buttonGifs.entries()) {
       let button = document.createElement("button");
       // button.dataset.pokemonGif = buttonGif;
       console.log( "Coucou", button, );
-      let url = "background-image: url("+pokemonGif+")";
+      pokemonGif = presetButtonGifs[i];
+      let url = `background-image: url(${pokemonGif})`;
       button.style = url;
       console.log( "Uesh", button, );
 
