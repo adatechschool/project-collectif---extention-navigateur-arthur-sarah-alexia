@@ -75,15 +75,16 @@ function constructGifOptions(buttonGifs) {
     for (let [i, buttonGif] of buttonGifs.entries()) {
       let button = document.createElement("button");
       // button.dataset.pokemonGif = buttonGif;
-      console.log( "Coucou", button, );
+      //console.log( "Coucou", button, );
       pokemonGif = presetButtonGifs[i];
       let url = `background-image: url(${pokemonGif}); background-size: 30px 30px`;
       button.style = url;
-      console.log( "Uesh", button, );
 
+      //les 3 lignes en dessous font buguer les boutons des GIFs
       // if (buttonGif === currentGif) {
       //   button.classList.add(chosenClassName);
       // }
+
       button.baseURI = pokemonGif
       button.addEventListener("click", handleButtonGifClick);
       page.appendChild(button);
