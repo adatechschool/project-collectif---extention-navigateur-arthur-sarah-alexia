@@ -16,4 +16,4 @@ Pour ce deuxième jour nous avons :
 - Extension changement de couleur des bordures
 - Extension changement de taille de la police
 - Extension changement des couleurs des balises h1 / background
-- Extension changement des images par une autre  
+- Extension changement des images par une autre 

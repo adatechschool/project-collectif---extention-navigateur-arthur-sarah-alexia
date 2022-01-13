@@ -46,16 +46,14 @@ function constructOptions(buttonColors) {
 // Initialize the page by constructing the color options
 constructOptions(presetButtonColors);
 
-
-
 //choix du GIF
+
 let gif = document.getElementById("buttonGif");
 let chosenClassName = "current";
 const presetButtonGifs = ["https://media.giphy.com/media/LxSFsOTa3ytEY/giphy.gif", "https://media.giphy.com/media/Kk9S4JvX439V6/giphy.gif", "https://media.giphy.com/media/Ev2Ov4wBz9Ogg/giphy.gif", "https://media3.giphy.com/media/3CWaVWrNJv27P4sPHR/giphy.gif?cid=6104955e422d685ec63161b7b494506866f4e14433187fde&rid=giphy.gif&ct=s"];
 
 
 function handleButtonGifClick(event) {
-  console.log("event", event.path[5].pokemonGif)
   let current = event.target.parentElement.querySelector(
     `.${chosenClassName}`
   );
@@ -63,27 +61,26 @@ function handleButtonGifClick(event) {
     current.classList.remove(chosenClassName);
   }
 
-  let pokemonGif = event.path[5].pokemonGif;//on a trouvé le chemin à utiliser pour l'URL dans la console
+  let pokemonGif = event.target.dataset.color;
   event.target.classList.add(chosenClassName);
-  chrome.storage.sync.set({ pokemonGif }); //ligne super importante
+  chrome.storage.sync.set({ pokemonGif });
 }
 
-//fonction qui va créer nos boutons pour choisir le GIF
+
 function constructGifOptions(buttonGifs) {
   chrome.storage.sync.get("pokemonGif", (data) => {
-    //let currentGif = data.color
+    let currentGif = data.color;
     for (let [i, buttonGif] of buttonGifs.entries()) {
       let button = document.createElement("button");
-      // button.dataset.pokemonGif = buttonGif;
-      //console.log( "Coucou", button, );
+      button.dataset.color = buttonGif;
+      button.style.backgroundImage = buttonGif;
       pokemonGif = presetButtonGifs[i];
       let url = `background-image: url(${pokemonGif}); background-size: 30px 30px`;
       button.style = url;
 
-      //les 3 lignes en dessous font buguer les boutons des GIFs
-      // if (buttonGif === currentGif) {
-      //   button.classList.add(chosenClassName);
-      // }
+      if (buttonGif === currentGif) {
+        button.classList.add(chosenClassName);
+      }
 
       button.baseURI = pokemonGif
       button.addEventListener("click", handleButtonGifClick);
