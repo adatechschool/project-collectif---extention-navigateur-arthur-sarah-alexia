@@ -55,6 +55,7 @@ const presetButtonGifs = ["https://media.giphy.com/media/LxSFsOTa3ytEY/giphy.gif
 
 
 function handleButtonGifClick(event) {
+  console.log("event", event.path[5].pokemonGif)
   let current = event.target.parentElement.querySelector(
     `.${chosenClassName}`
   );
@@ -62,15 +63,15 @@ function handleButtonGifClick(event) {
     current.classList.remove(chosenClassName);
   }
 
-  let pokemonGif = event.target.dataset.color;
+  let pokemonGif = event.path[5].pokemonGif;//on a trouvé le chemin à utiliser pour l'URL dans la console
   event.target.classList.add(chosenClassName);
-  chrome.storage.sync.set({ pokemonGif });
+  chrome.storage.sync.set({ pokemonGif }); //ligne super importante
 }
 
 //fonction qui va créer nos boutons pour choisir le GIF
 function constructGifOptions(buttonGifs) {
   chrome.storage.sync.get("pokemonGif", (data) => {
-    let currentGif = data.color
+    //let currentGif = data.color
     for (let [i, buttonGif] of buttonGifs.entries()) {
       let button = document.createElement("button");
       // button.dataset.pokemonGif = buttonGif;
@@ -80,10 +81,10 @@ function constructGifOptions(buttonGifs) {
       button.style = url;
       console.log( "Uesh", button, );
 
-      if (buttonGif === currentGif) {
-        button.classList.add(chosenClassName);
-      }
-
+      // if (buttonGif === currentGif) {
+      //   button.classList.add(chosenClassName);
+      // }
+      button.baseURI = pokemonGif
       button.addEventListener("click", handleButtonGifClick);
       page.appendChild(button);
     }
