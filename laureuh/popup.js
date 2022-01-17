@@ -51,7 +51,7 @@ function setPageTextColor() {
 let changeFontSize = document.getElementById("changeFontSize");
 
 chrome.storage.sync.get("fontSize", ({ fontSize }) => {
-  changeFontSize.style.backgroundColor = fontSize;
+  changeFontSize.style.backgroundColor = "#dcd6f7";
 });
 
 changeFontSize.addEventListener("click", async () => {
@@ -74,7 +74,7 @@ function setFontSize() {
 let changeBorderColor = document.getElementById("changeBorderColor");
 
 chrome.storage.sync.get("borderColor", ({ borderColor }) => {
-  changeBorderColor.style.backgroundColor = borderColor;
+  changeBorderColor.style.backgroundColor = "#FF7777";
 });
       
 changeBorderColor.addEventListener("click", async () => {
@@ -128,6 +128,7 @@ let changeGif = document.getElementById("changeGif");
 
 chrome.storage.sync.get("pokemonGif", ({ pokemonGif })=> {
   changeGif.style.backgroundImage = pokemonGif;
+  changeGif.style.backgroundColor = "white";
 });
 
 changeGif.addEventListener("click", async () => {
