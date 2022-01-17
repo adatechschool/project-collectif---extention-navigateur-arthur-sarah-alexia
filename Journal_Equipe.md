@@ -21,3 +21,9 @@ Pour ce deuxième jour nous avons :
 12/01/2022
 - Extension changement des images par un GIF sélectionner au préalable
 - Les boutons remplis par les GIF
+
+17/01/2022
+- Pour l'instant pas réussi à voir comment intégrer une API dans notre extension
+- Cet après-midi, travail sur le style des éléments de l'extension, 
+- Réorganisation des buttons des GIFs dans la page option pour qu'ils aillent dans la bonne div:
+- On a galéré parce qu'un élément du code n'avait pas été modifié, on a trouvé en fin de journée
