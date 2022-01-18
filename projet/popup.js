@@ -57,6 +57,7 @@ const handleSubmit = async e => {
     console.log(anime.value);
 };
 
+
 //event listener
 form.addEventListener("submit", e => handleSubmit(e));
 
