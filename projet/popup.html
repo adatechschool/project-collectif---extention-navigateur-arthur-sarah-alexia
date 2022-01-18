@@ -7,13 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body class="container">
+
     <form class="form-data">
-        <input type="text" class="anime-title"/>
+        <div class="enter-title">
+            Enter an anime title to get a quote:
+        </div>
+        <div>
+            <input id="title" type="text" class="anime-title" />
+        </div>
+        <button type="button" id="btn"></button> 
+        <!-- class="getQuote" value="Get Quote" -->
     </form>
-    <h5>Click here to get a random quote:</h5>
-    <button id="getQuote"></button>
+
+    <div class="result">
+        <div class="loading">loading...</div>
+        <div class="errors"></div>
+        <div class="data"></div>
+        <div class="result-container">
+            <p><strong>Anime title: </strong><span class="anime"></span></p>
+            <p><strong>Character: </strong> <span class="character"></span></p>
+            <p><strong>Quote: </strong><span class="quote"></span></p>
+        </div>
+    </div>
+    
     <script src="popup.js"> </script>
-    <script type = "module" src="./node_modules/axios/dist/axios.min.js"></script>
+
+    <!-- <script type = "module" src="./node_modules/axios/dist/axios.min.js"></script> -->
 </body>
 </html>

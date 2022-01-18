@@ -1,39 +1,37 @@
 {
-    "name": "Anime",
-    "description": "Reconnaisance d'une image d'anime !",
-    "version": "0.5",
-    "manifest_version": 3,
-    "background": {
-      "service_worker": "main.js"
-    },
-    "options_page": "options.html",
-    "permissions": ["<all_urls>"],
-    "browser_action": {
-        "default_icon": "/images/téléchargement.png",
-        "default_popup": "popup.html"
-    },
-    "action": {
-        "default_popup": "popup.html"
-    },
-    "icons": {
-      "128": "/images/téléchargement.png"
-    },
-    "content_scripts": [
-      {
-          "matches": [
-              "http://*/*",
-              "https://*/*"
-          ],
-          "js": [
-              "main.js",
-              "popup.js"
-          ],
-          "run_at": "document_end",
-          "css": [
-              "main.css"
-          ]
-      }
-    ],
-      "type": "module"
-  }
-  
+  "name": "Anime",
+  "description": "Reconnaisance d'une image d'anime !",
+  "version": "0.5",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "main.js"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "/images/téléchargement.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "main.js",
+        "popup.js"
+      ],
+      "run_at": "document_end",
+      "css": [
+        "main.css"
+      ]
+    }
+  ]
+}
