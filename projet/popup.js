@@ -1,25 +1,18 @@
-let getQuote = document.getElementById("getQuote");
+// let getQuote = document.getElementById("getQuote");
 
-// chrome.storage.sync.get("color", ({ color }) => {
-//   changeColor.style.backgroundColor = color;
-// });
+// // chrome.storage.sync.get("color", ({ color }) => {
+// //   changeColor.style.backgroundColor = color;
+// // });
 
-// When the button is clicked, inject setPageBackgroundColor into current page
-getQuote.addEventListener("click", async () => {
-  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+// // When the button is clicked, inject setPageBackgroundColor into current page
+// getQuote.addEventListener("click", async () => {
+//   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    function: setPageBackgroundColor,
-  });
-});
-
-var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function() {};
-xhr.open('GET', 'http://www.google.com');
-xhr.send()
-
-
+//   chrome.scripting.executeScript({
+//     target: { tabId: tab.id },
+//     function: 
+//   });
+// });
 
 
 

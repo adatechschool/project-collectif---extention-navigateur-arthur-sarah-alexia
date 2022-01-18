@@ -1,0 +1,10 @@
+import axios from "axios";
+const API = "https://animechan.vercel.app/api/random";
+const error = document.querySelector(".error");
+// const loading = document.querySelector(".loading");
+const quote = document.querySelector(".quote");
+const anime = document.querySelector(".anime");
+const character = document.querySelector(".character");
+const result = document.querySelector(".result-container");
+result.style.display = "none";
+loading.style.display = "none";
