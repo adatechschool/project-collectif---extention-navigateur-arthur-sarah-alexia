@@ -34,16 +34,22 @@
 //     }
 // };
 
-//declare a function to handle form submission
-function handleSubmit() {
-    e.preventDefault();
-    searchForTitle(anime);
-    console.log(anime);
-};
-
-
+async function fetchtxt() {
+    let response = await fetch('https://animechan.vercel.app/api/random');
+    let data = await response.json();
+    let result = "Anime : " + data.anime + "\n" + "Character : " + data.character + "\n" + "Quote : " + data.quote;
+    alert(result)
+}
 //event listener
-let button = document.getElementById("btn");
-button.addEventListener("click", function () {
-    console.log("HELLO");
+ let button = document.getElementById("getQuote");
+ button.addEventListener("click", function () {
+     fetchtxt();
 });
+
+// Ci dessous le code marche
+//declare a function to handle form submission
+// // function handleSubmit() {
+//     e.preventDefault();
+//     searchForTitle(anime);
+//     console.log(anime);
+// };
