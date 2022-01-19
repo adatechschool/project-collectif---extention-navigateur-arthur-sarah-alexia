@@ -37,11 +37,15 @@
 async function fetchtxt() {
     let response = await fetch('https://animechan.vercel.app/api/random');
     let data = await response.json();
-    let result = "Anime : " + data.anime + "\n" + "Character : " + data.character + "\n" + "Quote : " + data.quote;
+    // let result = "Anime : " + data.anime + "\n" + "Character : " + data.character + "\n" + "Quote : " + data.quote;
+    let txtanime = document.querySelector("anime");
+    anime.innerHTML = "Anime: " + data.anime;
+    let txtcharacter = document.querySelector("character");
+    character.innerHTML = "Character: " + data.character;
     let txtquote = document.querySelector("quote");
-    quote.innerHTML = data.quote;
-    console.log(txtquote.data)
-    txtquote.data = result;
+    quote.innerHTML = "Quote: " + data.quote;
+    // console.log(txtquote.data)
+    // txtquote.data = result;
 
 }
 //event listener
