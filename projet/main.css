@@ -1,4 +1,20 @@
+.enter-title {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
 
+.container {
+ background-color: rgb(196, 161, 161);
+ border:  black;
+ height: 250px;
+ width: 250px;
+}
+
+.style {
+    font-size: x-large;
+    font-weight: bold;
+}
 #getQuote {
     background-color: rgb(247, 157, 199);
     height: 20px;
