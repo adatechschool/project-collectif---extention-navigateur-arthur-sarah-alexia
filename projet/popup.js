@@ -40,6 +40,8 @@ async function fetchtxt() {
     // let result = "Anime : " + data.anime + "\n" + "Character : " + data.character + "\n" + "Quote : " + data.quote;
     let txtanime = document.querySelector("anime");
     anime.innerHTML = "Anime: " + data.anime;
+    // let animeTitle = document.querySelector("animeTitle");
+    // animeTitle.innerHTML = "Anime: ";
     let txtcharacter = document.querySelector("character");
     character.innerHTML = "Character: " + data.character;
     let txtquote = document.querySelector("quote");
