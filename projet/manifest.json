@@ -1,41 +1,40 @@
 {
-    "name": "Anime Quote",
-    "description": "Reconnaisance d'une image d'anime !",
-    "version": "2.0",
-    "manifest_version": 3,
-    "background": {
-      "service_worker": "main.js"
-    },
-    "options_page": "options.html",
-    "permissions": ["<all_urls>"],
-    "host_permissions" : ["https://animechan.vercel.app/api/*"],
-    "browser_action": {
-        "default_icon": "/images/ball.png",
-        "default_popup": "popup.html"
-    },
-    "action": {
-        "default_popup": "popup.html"
-    },
-    "icons": {
-
-      "128": "/images/ball.png"
-    },
-    "content_scripts": [
-      {
-          "matches": [
-              "http://*/*",
-              "https://*/*"
-          ],
-          "js": [
-              "main.js",
-              "popup.js"
-          ],
-          "run_at": "document_end",
-          "css": [
-              "main.css"
-          ]
-      }
-    ],
-      "type": "module"
-  }
-  
+  "name": "Anime Quote",
+  "description": "Reconnaisance d'une image d'anime !",
+  "version": "2.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "main.js"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://animechan.vercel.app/api/*"
+  ],
+  "action": {
+    "default_icon": "/images/ball.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "/images/ball.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "popup.js"
+      ],
+      "run_at": "document_end",
+      "css": [
+        "main.css"
+      ]
+    }
+  ]
+}
