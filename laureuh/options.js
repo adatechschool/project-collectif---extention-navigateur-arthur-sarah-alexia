@@ -83,7 +83,7 @@ function constructGifOptions(buttonGifs) {
       button.dataset.color = buttonGif;
       button.style.backgroundImage = buttonGif;
       pokemonGif = presetButtonGifs[i];
-      let url = `background-image: url(${pokemonGif}); background-size: 60px 60px`;
+      let url = `background-image: url(${pokemonGif}); background-size: 90px 90px`;
       button.style = url;
 
       // …mark the currently selected Gif…

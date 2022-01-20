@@ -1,10 +1,16 @@
 button {
-    height: 60px;
-    width: 60px;
+    height: 90px;
+    width: 90px;
     outline: none;
     margin: 10px;
     border: none;
     border-radius: 2px;
+}
+
+button span {
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.386);
+    border-radius: 10%;
 }
   
 button.current {
@@ -19,9 +25,13 @@ button.current {
 } */
 
 #changeGif {
-    background-image: url( 'https://cdn-icons-png.flaticon.com/512/188/188987.png' );
-    background-size: 60px 60px;
-    height: 60px;  
-    width: 60px;
+    background-image: url( 'https://media.giphy.com/media/EKDSLoPz0yLVC/giphy.gif' );
+    background-size: 90px 90px;
+    height: 90px;  
+    width: 90px;
+}
+
+#options {
+    background-color: #2E94B9;
 }
 

@@ -42,7 +42,7 @@ chrome.runtime.onInstalled.addListener(() => {
 
 
 //replace images by Pokemon gif
-let pokemonGif = "https://cdn-icons-png.flaticon.com/512/188/188987.png";
+let pokemonGif = "https://media.giphy.com/media/EKDSLoPz0yLVC/giphy.gif";
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.set({ pokemonGif });
