@@ -5,10 +5,24 @@
 }
 
 .container {
- background-color: rgb(196, 161, 161);
+ background-image: url('http://cm1.narvii.com/6831/52e06cc4ab3bf335878420b9953a596bdd5893e6_00.jpg');
+ background-size: 268px 268px;
  border:  black;
  height: 250px;
  width: 250px;
+}
+.enter-title {
+    background-color: aliceblue;
+    opacity: 0.8;
+    border-radius: 8px;
+    border: solid black;
+}
+
+#result {
+    background-color: aliceblue;
+    opacity: 0.8;
+    border-radius: 8px;
+    font-weight: bold;
 }
 
 .style {
@@ -16,7 +30,7 @@
     font-weight: bold;
 }
 #getQuote {
-    background-color: rgb(247, 157, 199);
+    background-color: #DFAB35;
     height: 20px;
     width: 60px;
     border: 15px, solid black;
